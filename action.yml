@@ -10,4 +10,4 @@ runs:
         # Configure that a scope must always be provided.
         requireScope: true
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ github.token }}
