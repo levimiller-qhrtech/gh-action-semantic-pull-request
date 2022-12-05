@@ -1,0 +1,13 @@
+name: 'Conventional Commit'
+description: 'Ensures PR title matches the Conventional Commits spec.'
+
+runs:
+  using: "composite"
+  steps:
+    - name: Validate PR title
+      uses: amannn/action-semantic-pull-request@v5
+      with:
+        # Configure that a scope must always be provided.
+        requireScope: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
